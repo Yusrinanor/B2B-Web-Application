@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b1c0e74155944b228e1a0b155ea3cc9e" Name="Diagram1">
+        <EntityTypeShape EntityType="B2BModel.Inquiry" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="B2BModel.Payment" Width="1.5" PointX="5.25" PointY="4.625" />
+        <EntityTypeShape EntityType="B2BModel.Plan" Width="1.5" PointX="3" PointY="7" />
+        <EntityTypeShape EntityType="B2BModel.Product" Width="1.5" PointX="0.75" PointY="3.125" />
+        <EntityTypeShape EntityType="B2BModel.User" Width="1.5" PointX="3" PointY="2.875" />
+        <AssociationConnector Association="B2BModel.FK__Payment__planId__534D60F1" />
+        <AssociationConnector Association="B2BModel.FK__Payment__product__52593CB8" />
+        <AssociationConnector Association="B2BModel.FK__Payment__userId__5165187F" />
+        <AssociationConnector Association="B2BModel.FK__Plans__productid__5441852A" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

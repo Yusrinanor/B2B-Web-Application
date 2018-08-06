@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<clients>
+  <client Id="1">
+    <clientName>Dell</clientName>
+    <clientDesc>We’re able to answer things in real time and it really has given us this power to make decisions in a smarter way and reduce our risk</clientDesc>
+  </client>
+  <client Id="2">
+    <clientName>Zalora</clientName>
+    <clientDesc>Search Ads 360 provides us with the technology and the support we needed to manage awareness campaigns with performance KPIs. Following our success, we will implement this approach with other brands</clientDesc>
+  </client>
+  <client Id="3">
+    <clientName>Airbnb</clientName>
+    <clientDesc>Our customers are located in 192 different countries, and BrandBuilder allows us to deliver a fast experience to our customers</clientDesc>
+  </client>
+  <client Id="4">
+    <clientName>JW Mariott</clientName>
+    <clientDesc>Google Analytics 360 has given us more transparency into our data. We’re now connecting information about our digital touch points and sharing these customer insights across our entire company</clientDesc>
+  </client>
+</clients>
