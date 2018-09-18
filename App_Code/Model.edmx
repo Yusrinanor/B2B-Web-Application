@@ -34,9 +34,10 @@
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="name" Type="varchar" MaxLength="50" />
-          <Property Name="productid" Type="int" />
-          <Property Name="description" Type="varchar" MaxLength="50" />
-          <Property Name="image2" Type="varchar" MaxLength="50" />
+          <Property Name="description" Type="varchar(max)" />
+          <Property Name="description 2" Type="varchar(max)" />
+          <Property Name="description 3" Type="varchar(max)" />
+          <Property Name="Price" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Product">
           <Key>
@@ -44,7 +45,7 @@
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="name" Type="varchar" MaxLength="50" />
-          <Property Name="description" Type="varchar" MaxLength="50" />
+          <Property Name="description" Type="varchar(max)" />
           <Property Name="price" Type="varchar" MaxLength="50" />
           <Property Name="image1" Type="varchar" MaxLength="50" />
         </EntityType>
@@ -96,18 +97,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Plans__productid__5441852A">
-          <End Role="Product" Type="Self.Product" Multiplicity="0..1" />
-          <End Role="Plans" Type="Self.Plans" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Product">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Plans">
-              <PropertyRef Name="productid" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="B2BModelStoreContainer">
           <EntitySet Name="Inquiry" EntityType="Self.Inquiry" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Payment" EntityType="Self.Payment" Schema="dbo" store:Type="Tables" />
@@ -125,10 +114,6 @@
           <AssociationSet Name="FK__Payment__userId__5165187F" Association="Self.FK__Payment__userId__5165187F">
             <End Role="Users" EntitySet="Users" />
             <End Role="Payment" EntitySet="Payment" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Plans__productid__5441852A" Association="Self.FK__Plans__productid__5441852A">
-            <End Role="Product" EntitySet="Product" />
-            <End Role="Plans" EntitySet="Plans" />
           </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -152,10 +137,6 @@
           <AssociationSet Name="FK__Payment__userId__5165187F" Association="B2BModel.FK__Payment__userId__5165187F">
             <End Role="User" EntitySet="Users" />
             <End Role="Payment" EntitySet="Payments" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Plans__productid__5441852A" Association="B2BModel.FK__Plans__productid__5441852A">
-            <End Role="Product" EntitySet="Products" />
-            <End Role="Plan" EntitySet="Plans" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="Inquiry">
@@ -190,11 +171,11 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="productid" Type="Int32" />
-          <Property Name="description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="image2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="description_2" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="description_3" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Price" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Payments" Relationship="B2BModel.FK__Payment__planId__534D60F1" FromRole="Plan" ToRole="Payment" />
-          <NavigationProperty Name="Product" Relationship="B2BModel.FK__Plans__productid__5441852A" FromRole="Plan" ToRole="Product" />
         </EntityType>
         <EntityType Name="Product">
           <Key>
@@ -202,11 +183,10 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="price" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="image1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Payments" Relationship="B2BModel.FK__Payment__product__52593CB8" FromRole="Product" ToRole="Payment" />
-          <NavigationProperty Name="Plans" Relationship="B2BModel.FK__Plans__productid__5441852A" FromRole="Product" ToRole="Plan" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -257,18 +237,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Plans__productid__5441852A">
-          <End Type="B2BModel.Product" Role="Product" Multiplicity="0..1" />
-          <End Type="B2BModel.Plan" Role="Plan" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Product">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Plan">
-              <PropertyRef Name="productid" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -303,9 +271,10 @@
           <EntitySetMapping Name="Plans">
             <EntityTypeMapping TypeName="B2BModel.Plan">
               <MappingFragment StoreEntitySet="Plans">
-                <ScalarProperty Name="image2" ColumnName="image2" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="description_3" ColumnName="description 3" />
+                <ScalarProperty Name="description_2" ColumnName="description 2" />
                 <ScalarProperty Name="description" ColumnName="description" />
-                <ScalarProperty Name="productid" ColumnName="productid" />
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>

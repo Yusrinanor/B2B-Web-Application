@@ -1,0 +1,24 @@
+﻿.amam {
+    height: 420px !important;
+}
+
+.max350 {
+    max-height: 350px;
+}
+
+.pad2em {
+    padding: 2em 0 !important;
+}
+
+.mytitle {
+    font-weight: bold !important;
+    color: #414141 !important;
+    font-size: 60px !important;
+}
+
+.title2nd {
+    font-weight: bold !important;
+    color:#414141 !important;
+    font-size: 25px !important;
+}
+

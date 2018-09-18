@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Blogs>
+  <blog Id="1">
+    <date>24th June</date>
+    <title>From basecamp to summit: Achieving new heights with BrandBuilder</title>
+    <content>Earlier this week we announced BB Marketing Platform, which brings together Digital Marketing tools into a single solution to plan, buy, measure and optimize customer experiences</content>
+    <author>Sarah Chong</author>
+  </blog>
+  <blog Id="2">
+    <date>2nd May</date>
+    <title>Better understand and reach your customers with new Cross Device capabilities in Analytics 360</title>
+    <content>Today, we’re introducing new Cross Device features to BrandBuilder. Analytics will now help you understand the journey your customers are taking across their devices as they interact with your website</content>
+    <author>Jeese Savage</author>
+  </blog>
+  <blog Id="3">
+    <date>3rd August</date>
+    <title>Putting Machine Learning into the hands of every advertiser</title>
+    <content>Consumers today are more curious, more demanding, and they expect to get things done faster because of mobile. As a result, they expect your ads to be helpful and personalized</content>
+    <author>Jerry Dischler</author>
+  </blog>
+</Blogs>

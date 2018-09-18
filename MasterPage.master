@@ -19,7 +19,7 @@
 
     <!-- Theme style  -->
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="css/MyStyle.css" />
     <!-- Modernizr JS -->
     <script src="js/modernizr-2.6.2.min.js"></script>
     <!-- FOR IE9 below -->
@@ -30,7 +30,7 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form runat="server">
+    <form id="form1" runat="server">
         <div class="fh5co-loader"></div>
         <div id="page">
             <nav class="fh5co-nav" role="navigation">
@@ -42,42 +42,56 @@
                         <div class="col-xs-10 text-right menu-1">
                             <ul>
 
-                                <li class="active"><a href="index.html">Home</a></li>
-                                
+                                <li class="active"><a href="Home.aspx">Home</a></li>
+
                                 <%if (Session["Email"] == null)
                                     { %>
                                 <li class="has-dropdown">
-                                    <a href="services.html">Marketing Solutions</a>
+                                    <a href="ProductCatalogue.aspx">Marketing Solutions</a>
                                     <ul class="dropdown">
-                                        <li><a href="#">Analytics 360</a></li>
-                                        <li><a href="#">Surveys 360</a></li>
-                                        <li><a href="#">Search Ads 360</a></li>
+                                        <% AddProduct1 addprod = new AddProduct1();
+                                            List<Product> product =
+                                            addprod.GetAllProducts();
+                                            foreach (Product products in product)
+                                            { %>
+                                        <li><a href="ProdDetails.aspx?id=<%=products.Id %>"><%=products.name %></a></li>
+                                        <%} %>
                                     </ul>
                                 </li>
                                 <li><a href="about.html">About</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="ContactUs.aspx">Contact</a></li>
                                 <li><a href="Login.aspx">Log in</a></li>
                                 <li><a href="Registration.aspx">Register</a></li>
                                 <%} %>
                                 <%if (usertype == "Customer")
                                     { %>
                                 <li class="has-dropdown">
-                                    <a href="services.html">Marketing Solutions</a>
+                                    <a href="ProductCatalogue.aspx">Marketing Solutions</a>
                                     <ul class="dropdown">
-                                        <li><a href="#">Analytics 360</a></li>
-                                        <li><a href="#">Surveys 360</a></li>
-                                        <li><a href="#">Search Ads 360</a></li>
+                                        <% AddProduct1 addprod = new AddProduct1();
+                                            List<Product> product =
+                                            addprod.GetAllProducts();
+                                            foreach (Product products in product)
+                                            { %>
+                                        <li><a href="ProdDetails.aspx?id=<%=products.Id %>"><%=products.name %></a></li>
+                                        <%} %>
                                     </ul>
                                 </li>
                                 <li><a href="about.html">About</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="ContactUs.aspx">Contact Us</a></li>
                                 <li><a href="blog.html">My Subscriptions</a></li>
                                 <li><a href="LogOut.aspx">Log out</a></li>
                                 <%} %>
                                 <%if (usertype == "Admin")
                                     { %>
-                                <li><a href="contact.html">Edit Solution</a></li>
-                                <li><a href="contact.html">View Customers</a></li>
+                                <li class="has-dropdown">
+                                    <a href="#">Add/Edit Services</a>
+                                    <ul class="dropdown">
+                                        <li><a href="Ad_AddProdt.aspx">Add Services</a></li>
+                                        <li><a href="Ad_ViewProd.aspx">View Services</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="Ad_ViewCust.aspx">View Customers</a></li>
                                 <li><a href="contact.html">View Payment</a></li>
                                 <li><a href="contact.html">View Inquiries</a></li>
                                 <li><a href="LogOut.aspx">Log out</a></li>
@@ -174,7 +188,7 @@
         <script src="js/main.js"></script>
 
 
-<%--        <script>
+        <%--        <script>
             $('#password, #confirm_password').on('keyup', function () {
                 if ($('#password').val() == $('#confirm_password').val()) {
                     $('#message').html('Password matched').css('color', 'green');

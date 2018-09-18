@@ -45,13 +45,13 @@ public partial class Plan
 
     public int Id { get; set; }
     public string name { get; set; }
-    public Nullable<int> productid { get; set; }
     public string description { get; set; }
-    public string image2 { get; set; }
+    public string description_2 { get; set; }
+    public string description_3 { get; set; }
+    public string Price { get; set; }
 
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
     public virtual ICollection<Payment> Payments { get; set; }
-    public virtual Product Product { get; set; }
 }
 
 public partial class Product
@@ -60,7 +60,6 @@ public partial class Product
     public Product()
     {
         this.Payments = new HashSet<Payment>();
-        this.Plans = new HashSet<Plan>();
     }
 
     public int Id { get; set; }
@@ -71,8 +70,6 @@ public partial class Product
 
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
     public virtual ICollection<Payment> Payments { get; set; }
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-    public virtual ICollection<Plan> Plans { get; set; }
 }
 
 public partial class User

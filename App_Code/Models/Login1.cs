@@ -36,4 +36,22 @@ public class Login1
             return "Error:" + e;
         }
     }
+
+    public List<User> GetAllUsers()
+    {
+        try
+        {
+            using (B2BEntities db = new B2BEntities())
+            {
+                List<User> user = (from x in db.Users where x.userType=="Customer" select x).ToList();
+                return user;
+            }
+        }
+
+        catch (Exception)
+        {
+            return null;
+        }
+    }
+
 }
