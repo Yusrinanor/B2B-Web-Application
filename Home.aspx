@@ -1,6 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Home.aspx.cs" Inherits="Home" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <style>
+        .span1{
+            font-weight:bold;
+        }
+    </style>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -26,7 +31,7 @@
         <div class="container">
             <div class="row row-pb-md">
                 <div class="col-md-8 col-md-offset-2 text-left fh5co-heading  animate-box">
-                    <h2>Our Services</h2>
+                    <h2 class="mytitle">Our Services</h2>
                 </div>
             </div>
 
@@ -60,8 +65,8 @@
             <div class="row row-pb-md">
                 <div class="col-md-8 col-md-offset-2 text-left animate-box" data-animate-effect="fadeInUp">
                     <div class="fh5co-heading">
-                        <span>We're expert</span>
-                        <h2>Why BrandBuilder?</h2>
+                        <span class="span1">We're expert</span>
+                        <h2 class="mytitle">Why BrandBuilder?</h2>
                         <p>We Give You The Solution You Need To Better Understand Your Customers</p>
                     </div>
                 </div>
@@ -71,7 +76,7 @@
                     <ItemTemplate>
                         <div class="col-md-4 col-sm-6 ">
                             <div class="feature-center animate-box" data-animate-effect="fadeInUp">
-                                <h3><%# XPath("Achieve1") %></h3>
+                                <h3><%# XPath("AchieveName") %></h3>
                                 <p><%# XPath("AchieveDesc") %></p>
                                 <p><a href="#"><%# XPath("AchieveLink") %></a></p>
                             </div>
@@ -88,8 +93,8 @@
         <div class="container">
             <div class="row animate-box row-pb-md">
                 <div class="col-md-8 col-md-offset-2 text-left fh5co-heading">
-                    <span>You deserved happiness</span>
-                    <h2>Happy Clients</h2>
+                    <span class="span1">You deserved happiness</span>
+                    <h2 class="mytitle">Happy Clients</h2>
                     <p>Our customers have seen improvements in their sales with our marketing tools</p>
                 </div>
             </div>
@@ -120,8 +125,8 @@
 
                 <div class="row animate-box" data-animate-effect="fadeInUp">
                     <div class="col-md-8 col-md-offset-2 text-left fh5co-heading">
-                        <span>Enjoy it</span>
-                        <h2>Fun Facts</h2>
+                        <span class="span1">Enjoy it</span>
+                        <h2 class="mytitle">Fun Facts</h2>
                         <p>Our business has grown 300% over the last 5 years</p>
                     </div>
                 </div>
@@ -175,8 +180,8 @@
             <div class="container">
                 <div class="row animate-box row-pb-md" data-animate-effect="fadeInUp">
                     <div class="col-md-8 col-md-offset-2 text-left fh5co-heading">
-                        <span>Thoughts &amp; Ideas</span>
-                        <h2>Our Blog</h2>
+                        <span class="span1">Thoughts &amp; Ideas</span>
+                        <h2 class="mytitle">Our Blog</h2>
                         <p>The latest news, perspectives, and insights from BrandBuilder Marketing Platform and their services.</p>
                     </div>
                 </div>

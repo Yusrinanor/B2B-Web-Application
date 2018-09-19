@@ -58,8 +58,8 @@
                                         <%} %>
                                     </ul>
                                 </li>
-                                <li><a href="about.html">About</a></li>
-                                <li><a href="ContactUs.aspx">Contact</a></li>
+                                <li><a href="AboutUs.aspx">About Us</a></li>
+                                <li><a href="ContactUs.aspx">Contact Us</a></li>
                                 <li><a href="Login.aspx">Log in</a></li>
                                 <li><a href="Registration.aspx">Register</a></li>
                                 <%} %>
@@ -77,18 +77,19 @@
                                         <%} %>
                                     </ul>
                                 </li>
-                                <li><a href="about.html">About</a></li>
+                                <li><a href="AboutUs.aspx">About Us</a></li>
                                 <li><a href="ContactUs.aspx">Contact Us</a></li>
                                 <li><a href="blog.html">My Subscriptions</a></li>
+                                <li><a href="Cust_ViewProfile.aspx">My Profile</a></li>
                                 <li><a href="LogOut.aspx">Log out</a></li>
                                 <%} %>
                                 <%if (usertype == "Admin")
                                     { %>
                                 <li class="has-dropdown">
-                                    <a href="#">Add/Edit Services</a>
+                                    <a href="#">Add/Edit Solutions</a>
                                     <ul class="dropdown">
-                                        <li><a href="Ad_AddProdt.aspx">Add Services</a></li>
-                                        <li><a href="Ad_ViewProd.aspx">View Services</a></li>
+                                        <li><a href="Ad_AddProdt.aspx">Add Solution</a></li>
+                                        <li><a href="Ad_ViewProd.aspx">View Solutions</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="Ad_ViewCust.aspx">View Customers</a></li>
