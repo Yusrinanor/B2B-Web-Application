@@ -45,7 +45,7 @@
                                         <p style="color:black"><%# XPath("serviceDescription") %></p>
                                     </div>
                                 </a>
-                                &nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
                             </div>
                         </ItemTemplate>
                     </asp:ListView>

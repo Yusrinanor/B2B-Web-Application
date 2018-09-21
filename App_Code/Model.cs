@@ -25,10 +25,12 @@ public partial class Payment
     public Nullable<int> userId { get; set; }
     public Nullable<int> productId { get; set; }
     public Nullable<int> planId { get; set; }
-    public string quantity { get; set; }
-    public string totalPrice { get; set; }
-    public string paymentType { get; set; }
-    public string datePayment { get; set; }
+    public string Price { get; set; }
+    public Nullable<System.DateTime> datePayment { get; set; }
+    public string CardNumber { get; set; }
+    public string ExpiryDate { get; set; }
+    public string SecurityCode { get; set; }
+    public string NameCard { get; set; }
 
     public virtual Plan Plan { get; set; }
     public virtual Product Product { get; set; }

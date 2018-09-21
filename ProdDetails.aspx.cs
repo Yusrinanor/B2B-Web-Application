@@ -12,11 +12,5 @@ public partial class ProdDetails : System.Web.UI.Page
        
     }
 
-    protected void Button1_Click(object sender, EventArgs e)
-    {
-        if (Session["Email"] == null)
-        {
-            Response.Redirect("Login.aspx");
-        }
-    }
+
 }

@@ -106,4 +106,21 @@ public class AddProduct1
             return null;
         }
     }
+
+    public Plan GetPlan(int id)
+    {
+        try
+        {
+            using (B2BEntities db = new B2BEntities())
+            {
+                Plan plan = db.Plans.Find(id);
+                return plan;
+
+            }
+        }
+        catch (Exception)
+        {
+            return null;
+        }
+    }
 }

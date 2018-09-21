@@ -10,7 +10,7 @@
                 <div class="col-md-7 text-left">
                     <div class="display-t">
                         <div class="display-tc animate-box" data-animate-effect="fadeInUp">
-                            <h1 class="mb30">Edit Services</h1>
+                            <h1 class="mb30">Edit Product</h1>
                         </div>
                     </div>
                 </div>
@@ -22,7 +22,7 @@
             <div class="row">
                 <div class="col-md-3"></div>
                 <div class="col-md-6 animate-box">
-                    <h3>Edit Product</h3>
+                    <h3>Edit Solution</h3>
                     <input type="hidden" runat="server" id="idproduct" />
                     <input type="hidden" runat="server" id="imageproduct" />
                     <div class="row form-group">

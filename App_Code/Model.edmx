@@ -23,10 +23,12 @@
           <Property Name="userId" Type="int" />
           <Property Name="productId" Type="int" />
           <Property Name="planId" Type="int" />
-          <Property Name="quantity" Type="varchar" MaxLength="50" />
-          <Property Name="totalPrice" Type="varchar" MaxLength="50" />
-          <Property Name="paymentType" Type="varchar" MaxLength="50" />
-          <Property Name="datePayment" Type="varchar" MaxLength="50" />
+          <Property Name="Price" Type="varchar" MaxLength="50" />
+          <Property Name="datePayment" Type="datetime" />
+          <Property Name="CardNumber" Type="varchar" MaxLength="50" />
+          <Property Name="ExpiryDate" Type="varchar" MaxLength="50" />
+          <Property Name="SecurityCode" Type="varchar" MaxLength="50" />
+          <Property Name="NameCard" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Plans">
           <Key>
@@ -157,10 +159,12 @@
           <Property Name="userId" Type="Int32" />
           <Property Name="productId" Type="Int32" />
           <Property Name="planId" Type="Int32" />
-          <Property Name="quantity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="totalPrice" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="paymentType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="datePayment" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Price" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="datePayment" Type="DateTime" Precision="3" />
+          <Property Name="CardNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ExpiryDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SecurityCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NameCard" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Plan" Relationship="B2BModel.FK__Payment__planId__534D60F1" FromRole="Payment" ToRole="Plan" />
           <NavigationProperty Name="Product" Relationship="B2BModel.FK__Payment__product__52593CB8" FromRole="Payment" ToRole="Product" />
           <NavigationProperty Name="User" Relationship="B2BModel.FK__Payment__userId__5165187F" FromRole="Payment" ToRole="User" />
@@ -257,10 +261,12 @@
           <EntitySetMapping Name="Payments">
             <EntityTypeMapping TypeName="B2BModel.Payment">
               <MappingFragment StoreEntitySet="Payment">
+                <ScalarProperty Name="NameCard" ColumnName="NameCard" />
+                <ScalarProperty Name="SecurityCode" ColumnName="SecurityCode" />
+                <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+                <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
                 <ScalarProperty Name="datePayment" ColumnName="datePayment" />
-                <ScalarProperty Name="paymentType" ColumnName="paymentType" />
-                <ScalarProperty Name="totalPrice" ColumnName="totalPrice" />
-                <ScalarProperty Name="quantity" ColumnName="quantity" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
                 <ScalarProperty Name="planId" ColumnName="planId" />
                 <ScalarProperty Name="productId" ColumnName="productId" />
                 <ScalarProperty Name="userId" ColumnName="userId" />
