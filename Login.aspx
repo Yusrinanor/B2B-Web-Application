@@ -9,8 +9,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-7 text-left">
-                    <div class="display-t">
-                        <div class="display-tc animate-box" data-animate-effect="fadeInUp">
+                    <div class="display-t amam">
+                        <div class="display-tc animate-box amam" data-animate-effect="fadeInUp">
                             <h1 class="mb30">Log in</h1>
                         </div>
                     </div>
@@ -18,7 +18,7 @@
             </div>
         </div>
     </header>
-    <div id="fh5co-contact">
+    <div id="fh5co-contact" class="pad2em">
         <div class="container">
             <div class="row">
                 <div class="col-md-3"></div>

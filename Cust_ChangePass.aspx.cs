@@ -9,7 +9,10 @@ public partial class Cust_ChangePass : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (Session["Email"] == null)
+        {
+            Response.Redirect("Login.aspx");
+        }
     }
 
     protected void edit_Click(object sender, EventArgs e)

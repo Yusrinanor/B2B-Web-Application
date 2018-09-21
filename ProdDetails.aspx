@@ -44,7 +44,7 @@
 
 
 
-                     %>
+                %>
                 <div class="col-md-5">
 
                     <h1 class="mytitle"><%=prod.name%></h1>
@@ -71,10 +71,11 @@
                         <p><i class="icon-check checkcolor"></i><%=plans.description %></p>
                         <p><i class="icon-check checkcolor"></i><%=plans.description_2 %></p>
                         <p><i class="icon-check checkcolor"></i><%=plans.description_3 %></p>
-                        <a class="btn btn-primary boxcolor" href="Cust_Payment.aspx?prodid=<%=prod.Id %>&proddesc=<%=prod.description %> &prodname=<%=prod.name %>&prodprice=<%=prod.price %>&planid=<%=plans.Id %>&planname=<%=plans.name %>&prodimage=<%=prod.image1 %>">Order Now</a>
-                       
+                        <a class="btn btn-primary boxcolor" href="Cust_Payment.aspx?prodid=<%=prod.Id %>&proddesc=<%=prod.description %> &prodname=<%=prod.name 
+    %>&prodprice=<%=prod.price %>&planid=<%=plans.Id%>&planname=<%=plans.name %>&prodimage=<%=prod.image1 %>=planprice=<%=plans.Price %>">Purchase Now</a>
+
                     </div>
-                    
+
                 </div>
                 <%} %>
             </div>
@@ -86,7 +87,5 @@
         {
             Response.Redirect("ProductCatalogue.aspx");
         } %>
-
-
 </asp:Content>
 

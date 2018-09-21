@@ -13,6 +13,10 @@ public partial class Cust_Receipt : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (Session["Email"] == null)
+        {
+            Response.Redirect("Login.aspx");
+        }
         if (Request.QueryString["payid"] != null)
         {
             payid = Convert.ToInt32(Request.QueryString["payid"]);

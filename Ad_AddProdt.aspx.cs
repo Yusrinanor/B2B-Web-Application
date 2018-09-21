@@ -10,10 +10,10 @@ public partial class Ad_AddProdt : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        //if (Session["Email"] == null)
-        //{
-        //    Response.Redirect("Home.aspx");
-        //}
+        if (Session["Email"] == null)
+        {
+            Response.Redirect("Login.aspx");
+        }
     }
 
     private Product CreateProduct()

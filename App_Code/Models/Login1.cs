@@ -139,4 +139,21 @@ public class Login1
         }
     }
 
+    public List<Payment> GetAllPayments()
+    {
+        try
+        {
+            using (B2BEntities db = new B2BEntities())
+            {
+                List<Payment> pay = (from x in db.Payments select x).ToList();
+                return pay;
+            }
+        }
+
+        catch (Exception)
+        {
+            return null;
+        }
+    }
+
 }

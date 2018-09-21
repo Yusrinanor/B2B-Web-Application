@@ -11,6 +11,10 @@ public partial class Ad_EditProd : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (Session["Email"] == null)
+        {
+            Response.Redirect("Login.aspx");
+        }
         if (!Page.IsPostBack)
         {
             if (Request.QueryString["Id"] != null)

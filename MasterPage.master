@@ -78,7 +78,7 @@
                                     </ul>
                                 </li>
                                 <li><a href="AboutUs.aspx">About Us</a></li>
-                                <li><a href="blog.html">My Subscriptions</a></li>
+                                <li><a href="#">My Subscriptions</a></li>
                                 <li><a href="Cust_ViewProfile.aspx">My Profile</a></li>
                                 <li><a href="ContactUs.aspx">Contact Us</a></li>
                                 <li><a href="LogOut.aspx">Log out</a></li>
@@ -93,7 +93,7 @@
                                     </ul>
                                 </li>
                                 <li><a href="Ad_ViewCust.aspx">View Customers</a></li>
-                                <li><a href="contact.html">View Customers Subscriptions</a></li>
+                                <li><a href="Ad_ViewPayment.aspx">View Customers Subscriptions</a></li>
                                 <li><a href="LogOut.aspx">Log out</a></li>
                                 <%} %>
                             </ul>

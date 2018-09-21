@@ -13,7 +13,7 @@ public partial class Cust_ViewProfile : System.Web.UI.Page
 
         if (Session["Email"] == null)
         {
-            Response.Redirect("Home.aspx");
+            Response.Redirect("Login.aspx");
         }
         else
         {
