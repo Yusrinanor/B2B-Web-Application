@@ -40,4 +40,21 @@ public class Payment1
             return null;
         }
     }
+
+    public List<Payment> getAllPayments(int userid)
+    {
+        try
+        {
+            using (B2BEntities db = new B2BEntities())
+            {
+                List<Payment> payment = (from x in db.Payments where x.userId == userid select x).ToList();
+                return payment;
+            }
+        }
+
+        catch (Exception)
+        {
+            return null;
+        }
+    }
 }

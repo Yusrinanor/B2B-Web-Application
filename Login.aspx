@@ -41,7 +41,7 @@
                             <asp:Button runat="server" ID="login" Text="Login" CssClass="btn btn-lg btn-primary" OnClick="login_Click" />
                         </div>
 
-                    <div class="border-top card-body text-center">Don't have an account? <a href="Login.aspx">Register</a></div>
+                    <div class="border-top card-body text-center">Don't have an account? <a href="Registration.aspx">Register</a></div>
                 </div>
                 <div class="col-md-3"></div>
             </div>

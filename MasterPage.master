@@ -78,7 +78,7 @@
                                     </ul>
                                 </li>
                                 <li><a href="AboutUs.aspx">About Us</a></li>
-                                <li><a href="#">My Subscriptions</a></li>
+                                <li><a href="Cust_Subscription.aspx">My Subscriptions</a></li>
                                 <li><a href="Cust_ViewProfile.aspx">My Profile</a></li>
                                 <li><a href="ContactUs.aspx">Contact Us</a></li>
                                 <li><a href="LogOut.aspx">Log out</a></li>
