@@ -25,25 +25,37 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th class="text-center">User Id</th>
-                                <th class="text-center">Product Id</th>
-                                <th class="text-center">Plan Id</th>
-                                <th class="text-center">Price</th>   
-                                <th class="text-center"> Subscription Status</th>                        
+                                <th class="text-center">User Name</th> <!-- user name is from user data -->
+                                <th class="text-center">Service Name</th><!-- service name is from product data -->
+                                <th class="text-center">Plan Type</th><!-- plan type name is from plan data -->
+                                <th class="text-center">Price</th>   <!-- price from payment plan price -->
+                                <th class="text-center"> Subscription Status</th>   <!-- on-going status -->                     
                             </tr>
                         </thead>
                         <tbody>
-                            <%Login1 listpayment = new Login1();
-                                List<Payment> pay =
-                                listpayment.GetAllPayments();
-                                foreach (Payment payment in pay)
-                                { %>
+                            <%Login1 loginclass = new Login1();
+                                List<Payment> pay = loginclass.GetAllPayments();
+                                AddProduct1 productclass = new AddProduct1();
+                                
+                                foreach (Payment payment in pay) //it loops every object from Payment data in the form of the list using the function getallpayments
+                                {
+
+                                    User user = loginclass.GetUser(Convert.ToInt32(payment.userId)); //Get GetUser function which returns User, explains why it is 'User user='. Put User ID in bracket
+                                    //since u r looking for the user based on ID
+                                    // convert because from entity framework, they generate the payment.userId as Int?. it should be Int (it is by definition and implementation is same) however, the compiler interprete it
+                                    // differently
+
+                                    
+                                    Product product = productclass.GetProduct(Convert.ToInt32(payment.productId));
+                                    Plan plan = productclass.GetPlan(Convert.ToInt32(payment.planId));
+                                    %>
+                                    
                             <tr>
-                                <td><%=payment.userId%></td>
-                                <td><%=payment.productId %></td>
-                                <td><%=payment.planId%></td>
-                                <td><%=payment.Price %></td>  
-                                <td>On-going</td>                                                          
+                                <td class="text-center"><%=user.fullName%></td> <!-- to get full name u have to use .fullname because initially, it is returning an object so to be specific u use a dot -->
+                                <td class="text-center"><%=product.name %></td>
+                                <td class="text-center"><%=plan.name%></td>
+                                <td class="text-center"><%=payment.Price %></td>  
+                                <td class="text-center">On-going</td>                                                          
                             </tr>
                             <%} %>
                         </tbody>

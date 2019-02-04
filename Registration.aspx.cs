@@ -30,6 +30,11 @@ public partial class Registration : System.Web.UI.Page
         User users = createUser();
         lblresult.Text = register.AddUser(users);
         lblterm.Visible = false;
+        fname.Value = string.Empty;
+        comname.Value = string.Empty;
+        email.Value = string.Empty;
+        countryselect.Value = string.Empty;
+        password.Value = string.Empty;
         
     }
 }

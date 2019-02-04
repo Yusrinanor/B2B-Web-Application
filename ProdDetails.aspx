@@ -67,7 +67,7 @@
                     <div class="fh5co-post" style="text-align: center">
                         <h1><%=plans.name %></h1>
                         <hr />
-                        <h5><strong style="font-size: 35px; color: deepskyblue"><%=plans.Price %></strong>/per month</h5>
+                        <h5><strong style="font-size: 35px; color: deepskyblue">Plus<%=plans.Price %></strong></h5>
                         <p><i class="icon-check checkcolor"></i><%=plans.description %></p>
                         <p><i class="icon-check checkcolor"></i><%=plans.description_2 %></p>
                         <p><i class="icon-check checkcolor"></i><%=plans.description_3 %></p>

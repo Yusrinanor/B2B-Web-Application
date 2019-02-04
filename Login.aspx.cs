@@ -29,6 +29,6 @@ public partial class Login : System.Web.UI.Page
             Response.Redirect("Home.aspx");
         }
         else
-            Response.Write("Invalid User");
+            Response.Write("Invalid e-mail or password");
     }
 }

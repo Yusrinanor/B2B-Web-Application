@@ -82,7 +82,7 @@
                         <asp:Button runat="server" ID="edit" Text="Save Changes" CssClass="btn btn-lg btn-primary" OnClick="edit_Click" />
                     </div>
 
-                    <asp:Label runat="server" ID="lblresult4" CssClass="text-success">ff</asp:Label>
+                    <asp:Label runat="server" ID="lblresult4" CssClass="text-success"></asp:Label>
 
 
                 </div>

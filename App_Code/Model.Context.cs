@@ -28,4 +28,5 @@ public partial class B2BEntities : DbContext
     public virtual DbSet<Plan> Plans { get; set; }
     public virtual DbSet<Product> Products { get; set; }
     public virtual DbSet<User> Users { get; set; }
+
 }

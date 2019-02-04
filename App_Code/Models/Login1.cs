@@ -28,7 +28,7 @@ public class Login1
             db.Users.Add(users);
             db.SaveChanges();
 
-            return users.email + "was successfully registered";
+            return users.email +  "was successfully registered";
         }
 
         catch (Exception e)
@@ -57,8 +57,8 @@ public class Login1
     public int GetuserID(string email)
     {
         B2BEntities db = new B2BEntities();
-        int query = (from x in db.Users where x.email == email select x.Id).FirstOrDefault();
-        return query;
+        int query = (from x in db.Users where x.email == email select x.Id).FirstOrDefault(); //first or default means its getting the first data which is the ID in this case. 
+        return query; //x.email == email means a column called email in the user data is equals to the variable called email
     }
 
     public User GetUser(int id)

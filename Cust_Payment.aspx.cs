@@ -27,18 +27,20 @@ public partial class Cust_Payment : System.Web.UI.Page
     private Payment createPayment()
     {
         Payment pay = new Payment();
-        string email = Session["Email"].ToString();
+        string email = Session["Email"].ToString(); //get session email to get the user id
         Login1 login = new Login1();
         int userid = login.GetuserID(email);
         int productid = Convert.ToInt32(Request.QueryString["prodid"]);
         int planid = Convert.ToInt32(Request.QueryString["planid"]);
-        string price = Request.QueryString["prodprice"];
+        string prodprice = Request.QueryString["prodprice"];
+        string planprice = Request.QueryString["planprice"];
+        double totalprice = Convert.ToDouble(prodprice) + Convert.ToDouble(planprice);
         DateTime now = DateTime.Now;
         pay.datePayment = now;
         pay.userId = userid;
         pay.productId = productid;
         pay.planId = planid;
-        pay.Price = price;
+        pay.Price = Convert.ToString(totalprice);
         pay.CardNumber = cnumb.Value;
         pay.ExpiryDate = month.Value + year.Value;
         pay.SecurityCode = code.Value;

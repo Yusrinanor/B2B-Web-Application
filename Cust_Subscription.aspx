@@ -36,14 +36,14 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <%Login1 userclass = new Login1();
-                                int userid = userclass.GetuserID(emailsession);
-                                AddProduct1 productclass = new AddProduct1();
+                            <%Login1 userclass = new Login1(); //create new object to access Login1 class
+                                int userid = userclass.GetuserID(emailsession); //int is the returning data type, access the function from Login1 class and put email session in there based on variable name created in aspx.cs.
+                                //email session is in the URL containing the user id
+                                AddProduct1 productclass = new AddProduct1(); //create new object to access AddProduct1 class
 
-                                Payment1 paymentclass = new Payment1();
-                                List<Payment> payment =
-                                paymentclass.getAllPayments(userid);
-                                foreach (Payment payments in payment)
+                                Payment1 paymentclass = new Payment1(); //create new object to access AddProduct1 class
+                                List<Payment> payment = paymentclass.getAllPayments(userid);
+                                foreach (Payment payments in payment) //access the object in payment data and loop it in the form of list using getallpayment
                                 {
                                     Product product = productclass.GetProduct(Convert.ToInt32(payments.productId));
                                     Plan plan = productclass.GetPlan(Convert.ToInt32(payments.planId));
